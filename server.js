@@ -334,7 +334,7 @@ app.get('/fetch-sleep-data-suggestion', (req, res) => {
 
 
 app.listen(port, (req, res) => {
-    console.log('listening on port 3000......')
+    console.log('listening on port'+ port +'......')
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log('Current Timezone ' + timeZone);
 })
