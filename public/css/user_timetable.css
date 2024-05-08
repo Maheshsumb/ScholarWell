@@ -1,0 +1,115 @@
+.user-button-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-entry {
+    height: auto;
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    margin: 3%;
+
+}
+
+#add-entry-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputs input {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin: 14px;
+}
+
+.time-table {
+    /*background-color: rebeccapurple;*/
+    width: 90%;
+    margin: 40px 5%;
+    height: 90%;
+}
+
+thead {
+    height: 6%;
+    background-color: rgba(0, 255, 255, 0.505);
+    font-size: 1.5rem;
+}
+
+tbody {
+    height: 94%;
+    font-size: 1.4rem;
+}
+
+table thead th {
+    width: 1%;
+    height: 100%;
+
+}
+
+table,
+th,
+td {
+    margin: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tbody td {
+    height: auto;
+    padding: 10px;
+}
+
+/* CSS for alert boxes */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert.alert-success {
+    background-color: #28a745;
+    /* Green */
+}
+
+.alert.alert-error {
+    background-color: #dc3545;
+    /* Red */
+}
+#download-timetable{
+    position: absolute;
+    left: 50%;
+    margin-top: 10px;
+}

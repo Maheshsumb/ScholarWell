@@ -1,0 +1,82 @@
+
+.heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-right {
+    height: 100%;
+    width: 30%;
+    padding: 0px 5px;
+    padding-top: 3px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 0 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+    width: 3%;
+    height: auto;
+    min-height: 100vh;
+    border-right: 1px solid #7d7979;;
+    transition: all 0.5s ease-in-out;
+    
+}
+.sidebar button h1{
+    font-size: 0;
+}
+.sidebar:hover {
+    width: 10%;
+}
+.sidebar:hover button{
+    justify-content: flex-start;
+}
+.sidebar:hover button img {
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+.sidebar:hover h1{
+    font-size: 1rem;
+    padding: 10px;
+    transition: all 0.7s ease-in-out;
+}
+.content {
+    width: 97%;
+    min-height: 100vh;
+    height: auto;
+    padding: 10px;
+}
+.sidebar button{
+    background: transparent;
+    border: none;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sidebar button img{
+    width: 20px;
+    height: 20px;
+}
+.dashboard-content {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#time-table-d,#sleep-data{
+    background:rgb(0, 238, 255);
+    height: 80px;
+    width: 260px;
+    border-radius: 13px;
+    font-size: 1.5rem;
+}

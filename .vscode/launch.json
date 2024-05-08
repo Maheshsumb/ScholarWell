@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+// Function to predict health based on symptoms
+string predictHealth(const vector<string>& symptoms) {
+    // This is a simple AI model, replace with a more sophisticated model for better accuracy
+    map<string, string> healthMap = {
+        {"cough", "cold"},
+        {"fever", "flu"},
+        {"fatigue", "stress"},
+        {"headache", "migraine"}
+    };
+
+    // Predict health based on symptoms
+    for (const auto& symptom : symptoms) {
+        if (healthMap.find(symptom) != healthMap.end()) {
+            return healthMap[symptom];
+        }
+    }
+
+    return "healthy";
+}
+
+int main() {
+    // Welcome message
+    cout << "Welcome to the Health Management System!" << endl;
+
+    // Input symptoms
+    vector<string> symptoms;
+    string symptom;
+    cout << "Enter symptoms (one at a time, type 'done' to finish):" << endl;
+    while (true) {
+        cout << "> ";
+        cin >> symptom;
+        if (symptom == "done") {
+            break;
+        }
+        symptoms.push_back(symptom);
+    }
+
+    // Predict health based on symptoms
+    string health = predictHealth(symptoms);
+
+    // Output prediction
+    if (health == "healthy") {
+        cout << "You are healthy!" << endl;
+    } else {
+        cout << "Based on your symptoms, you might have: " << health << endl;
+    }
+
+    return 0;
+}

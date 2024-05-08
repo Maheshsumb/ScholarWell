@@ -1,0 +1,133 @@
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* CSS for alert boxes */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert.alert-success {
+    background-color: #28a745;
+    /* Green */
+}
+
+.alert.alert-error {
+    background-color: #dc3545;
+    /* Red */
+}
+
+.inputs {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    margin: 3%;
+}
+.inputs h1,h2,h3{
+    padding: 20px;
+}
+h3 {
+    padding-top: 0;
+}
+#sleepForm{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sleepForm input{
+    width: 65%;
+    height: 35px;
+    padding:10px ;
+}
+#formButton{
+    width: 35%;
+    margin: 20px;
+}
+.data {
+    display: flex;
+}
+
+.data div {
+    width: 48.5%;
+    min-height: 400px;
+    height: auto;
+}
+.data div canvas {  
+    display: block;
+    box-sizing: border-box;
+    height: 100% !important;
+    width: 100% !important;
+}
+#sleepData {
+    display: flex;
+    justify-content: center;
+}
+
+.display-sleep-table {
+    width: 90%;
+    margin: 40px 5%;
+    height: auto;
+    font-size: 1.4rem;
+    border-collapse: collapse;
+}
+
+.display-sleep-table th,
+.display-sleep-table td {
+    margin: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+.sleep-graph {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.suggestion-div {
+    padding: 50px;
+    padding-top: 30px;
+}
+
+#suggestionBoxOuter {
+    font-size: 2rem;
+    display: flex;
+
+}
+
+#suggestionBox {
+    font-size: 1.8rem;
+}
+#forForm{
+    height: 0.5px;
+    width: 50%;
+    margin: 0;
+}
+#downloadReport{
+    position: absolute;
+    left: 50%;
+}
