@@ -2,10 +2,10 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const knex = require("knex");
+require("dotenv").config();
 process.env.TZ = "UTC"; // Set timezone to UTC// Set timezone to UTC
 const port = process.env.PORT || 3000;
-
-// Your Node.js application code here
+const servicePassword = process.env.SERVICE_PASSWORD;
 
 const db = knex({
   client: "pg",
@@ -13,7 +13,7 @@ const db = knex({
     host: "pg-3417690e-stumpstoryhighlights-2a4e.d.aivencloud.com",
     port: 23587,
     user: "avnadmin",
-    password: "AVNS_mwrcD-Hxb2uPrbut9NT",
+    password: servicePassword,
     database: "defaultdb",
     ssl: { rejectUnauthorized: false }, // Enable SSL
   },
