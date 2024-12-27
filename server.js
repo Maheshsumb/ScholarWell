@@ -2,7 +2,8 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const knex = require("knex");
-process.env.TZ = "UTC"; // Set timezone to UTC
+process.env.TZ = "UTC"; // Set timezone to UTC// Set timezone to UTC
+const port = process.env.PORT || 3000;
 
 // Your Node.js application code here
 
@@ -363,8 +364,14 @@ app.get("/fetch-sleep-data-suggestion", (req, res) => {
     });
 });
 
-app.listen(3000, (req, res) => {
-  console.log("listening on port 3000......");
+// app.listen(PORT, (req, res) => {
+//   console.log("listening on port 3000......");
+//   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+//   console.log("Current Timezone " + timeZone);
+// });
+
+app.listen(port, (req, res) => {
+  console.log("listening on port" + port + "......");
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   console.log("Current Timezone " + timeZone);
 });
